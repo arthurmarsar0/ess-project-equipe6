@@ -25,7 +25,7 @@ Scenario: Busca de hoteis com alto numero de pessoas
     | Local         | Data de Chegada | Data de Saida | Número de pessoas |
     | Cairo - Egito | 22/11/2025      | 26/12/2025    | 15 pessoas        |
     And seleciona a opção "Pesquisar"
-    Then uma mensagem de erro é exibida indicando que "Parece que não existem quartos para a quantidade de pessoas que você digitou. O que acha de realizar uma busca com menos pessoas e locar mais de um quarto? ""
+    Then uma mensagem de erro é exibida indicando que "Parece que não existem quartos para a quantidade de pessoas que você digitou. O que acha de realizar uma busca com menos pessoas e locar mais de um quarto? "
 
 Feature: Filtrar hoteis
     As a usuário comum
