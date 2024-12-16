@@ -38,7 +38,7 @@ Feature: Realizar cadastro de usuário pessoa física
         And eu preencho o campo "Email" com "pfusuario@exemplo.com"
         And eu preencho o campo "Senha" com "Senha@123"
         And eu confirmo o campo "Senha" com "Senha@123"
-        When eu clico em “Concluir”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de sucesso é exibida “Cadastro realizado com sucesso”
 
     Scenario: Falha ao cadastrar Pessoa Física com CPF inválido
@@ -50,7 +50,7 @@ Feature: Realizar cadastro de usuário pessoa física
         And eu preencho o campo "Email" com "pfusuario@exemplo.com"
         And eu preencho o campo "Senha" com "Senha@123"
         And eu confirmo o campo "Senha" com "Senha@123"
-        When eu clico em “Concluir”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de erro é exibida “CPF inválido”
 
     Scenario: Falha ao cadastrar senha que não atende os critérios
@@ -62,7 +62,7 @@ Feature: Realizar cadastro de usuário pessoa física
         And eu preencho o campo "Email" com "pfusuario@exemplo.com"
         And eu preencho o campo "Senha" com "12345678"
         And eu confirmo o campo "Senha" com "12345678"
-        When eu clico em “Concluir”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de erro é exibida “A senha deve ter no mínimo 8 caracteres, incluindo maiúsculas, minúsculas e caracteres especiais”
 
     Scenario: Falha ao cadastrar por campos obrigatórios não preenchidos
@@ -74,7 +74,7 @@ Feature: Realizar cadastro de usuário pessoa física
         And eu preencho o campo "Email" com "pfusuario@exemplo.com"
         And eu preencho o campo "Senha" com "Senha@123"
         And eu confirmo o campo "Senha" com "Senha@123"
-        When eu clico em “Concluir”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de erro é exibida “O campo Nome é obrigatório”
 
 
@@ -101,7 +101,7 @@ Feature: Realizar cadastro de usuário pessoa jurídica
         And eu envio a "Foto de perfil"
         And eu preencho o campo "Senha" com "Senha@123"
         And eu preencho o campo "Confirmar senha" com "Senha@123"
-        When eu clico em “Cadastrar”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de sucesso é exibida “Cadastro realizado com sucesso”
 
 
@@ -110,7 +110,7 @@ Feature: Realizar cadastro de usuário pessoa jurídica
         And eu preencho o campo "Nome" com "Empresa Exemplo LTDA"
         And eu preencho o campo "CNPJ" com "123456"
         And eu preencho os demais campos obrigatórios corretamente
-        When eu clico em “Cadastrar”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de erro é exibida “CNPJ inválido”
 
 
@@ -119,5 +119,5 @@ Feature: Realizar cadastro de usuário pessoa jurídica
         And eu preencho todos os campos obrigatórios corretamente
         And eu preencho o campo "Senha" com "12345678"
         And eu preencho o campo "Confirmar senha" com "12345678"
-        When eu clico em “Cadastrar”
+        When eu seleciono em “Cadastrar”
         Then uma mensagem de erro é exibida “A senha deve ter no mínimo 8 caracteres, incluindo maiúsculas, minúsculas e caracteres especiais”
