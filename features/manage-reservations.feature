@@ -3,6 +3,8 @@ Feature: Acessar pedidos de reservas de uma localidade
 	I want to  Ver os pedidos de reservas e as reservas confirmadas de uma localidade
 	So that  Eu posso gerenciar as reservas em aberto e confirmadas
 
+    #Scenario GUI 
+
     Scenario: Abrir reservas de uma localidade
 	    Given  estou na página "Gerenciar reservas"
 	    And  eu vejo que há localidade cadastrada
@@ -48,6 +50,8 @@ Feature: Acessar as reservas feitas pela minha conta
 	I want to  Ver os pedidos de reservas e as reservas confirmadas da minha conta
 	So that  Eu posso gerenciar as reservas em aberto e confirmadas 
 
+    #Scenario GUI
+    
     Scenario: Abrir detalhamento de um pedido de reserva
         Given eu estou na página "Gerenciar reservas"
         And há pedidos de reservas em "à confirmar" 
