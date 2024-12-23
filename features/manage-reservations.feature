@@ -4,6 +4,10 @@ Feature: Acessar pedidos de reservas de uma localidade
 	So that  Eu posso gerenciar as reservas em aberto e confirmadas
 
     #Scenario GUI 
+    Scenario: Abrir gerenciamento de reservas
+        Given estou na página "inicial"
+        When eu seleciono "Gerenciar reservas"
+        Then eu sou direcionado para a página "Gerenciar reservas"
 
     Scenario: Abrir reservas de uma localidade
 	    Given  estou na página "Gerenciar reservas"
@@ -87,3 +91,8 @@ Feature: Acessar as reservas feitas pela minha conta
         When seleciono "edita uma reserva"
         Then eu sou direcionado à página "Editar reserva"
         And uma mensagem de aviso "Faça suas alterações" é exibida
+
+    Scenario: Abir página de gerenciar suas reservas
+        Given estou na página "Main menu"
+        When selecio "Gerenciar minhas reservas"
+        Then sou redirecionado à página "Gerenciar minhas reservas"
