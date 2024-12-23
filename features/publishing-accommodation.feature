@@ -55,4 +55,13 @@ Feature: Publicando Acomodação
     And o usuário tenta enviar as informações
     Then o sistema não permite o usuário enviar a publicação
 
-Consegui apenas realizar o cenário de serviço acima, pois acredito que todos os outros casos seriam muito triviais e, portanto, pouco relevantes. (por exemplo, o envio com sucesso dos dados preenchidos na página “Publicar Acomodação”).
+
+  Scenario: Acomodação não publicada com sucesso devido a campos incompletos
+    Given that estou na página "publicar reserva"
+    When preencho os detalhes da propriedade com a opção "wifi" e "tv"
+    And seleciono a opção "2" no número de pessoas acomodadas
+    And preencho o preço da propriedade com o valor "100"
+    And envio as fotos "foto1.png" e "photo2.png"
+    And envio as informações preenchidas
+    Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
+Por favor, preencha todos os campos antes de publicar a acomodação."
