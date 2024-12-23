@@ -86,3 +86,4 @@ Feature: Acessar as reservas feitas pela minha conta
         Given estou na página de detalhamento da reserva "nome da localidade"
         When seleciono "edita uma reserva"
         Then eu sou direcionado à página "Editar reserva"
+        And uma mensagem de aviso "Faça suas alterações" é exibida
