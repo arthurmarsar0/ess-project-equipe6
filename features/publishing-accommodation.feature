@@ -48,6 +48,7 @@ Feature: Publicando Acomodação
     Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
   O preço inserido é inferior ao preço mínimo permitido pelo sistema."
 
+  # Service Scenario
   Scenario: Tentativa de preenchimento do preço de uma acomodação com caracteres inválidos
     Given o usuário “Hotel Fazenda” com CNPJ apto está cadastrado no sistema como Pessoa Jurídica
     And o usuário “Hotel Fazenda” está na página “Publicar Acomodação”
