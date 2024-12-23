@@ -46,5 +46,12 @@ Feature: Publicando Acomodação
     And defino um preço inferior ao preço mínimo permitido pelo sistema
     And envio as informações preenchidas
     Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
-    O preço inserido é inferior ao preço mínimo permitido pelo sistema."
-    And a tela continua na página "Publicacao de Acomodacao"
+  O preço inserido é inferior ao preço mínimo permitido pelo sistema."
+
+  # Service Scenario
+  Scenario: Tentativa de preenchimento do preço de uma acomodação com caracteres inválidos
+    Given o usuário “Hotel Fazenda” com CNPJ apto está cadastrado no sistema como Pessoa Jurídica
+    And o usuário “Hotel Fazenda” está na página “Publicar Acomodação”
+    When o usuário “Hotel Fazenda” preenche o preço com o caracter "#"
+    And o usuário tenta enviar as informações
+    Then o sistema não permite o usuário enviar a publicação
