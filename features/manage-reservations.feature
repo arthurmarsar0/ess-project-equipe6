@@ -90,3 +90,8 @@ Feature: Acessar as reservas feitas pela minha conta
         Given estou na página de detalhamento da reserva "nome da localidade"
         When seleciono "edita uma reserva"
         Then eu sou direcionado à página "Editar reserva"
+
+    Scenario: Abir página de gerenciar suas reservas
+        Given estou na página "Main menu"
+        When selecio "Gerenciar minhas reservas"
+        Then sou redirecionado à página "Gerenciar minhas reservas"
