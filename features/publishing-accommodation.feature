@@ -51,7 +51,7 @@ Feature: Publicando Acomodação
   Scenario: Tentativa de preenchimento do preço de uma acomodação com caracteres inválidos
     Given o usuário “Hotel Fazenda” com CNPJ apto está cadastrado no sistema como Pessoa Jurídica
     And o usuário “Hotel Fazenda” está na página “Publicar Acomodação”
-    When o usuário “Hotel Fazenda” preenche o preço com o carácter "#”
+    When o usuário “Hotel Fazenda” preenche o preço com o carácter "#"
     And o usuário tenta enviar as informações
     Then o sistema não permite o usuário enviar a publicação
 
@@ -64,4 +64,4 @@ Feature: Publicando Acomodação
     And envio as fotos "foto1.png" e "photo2.png"
     And envio as informações preenchidas
     Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
-Por favor, preencha todos os campos antes de publicar a acomodação."
+Por favor, preencha todos os campos antes de publica-la."
