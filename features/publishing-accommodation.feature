@@ -56,6 +56,7 @@ Feature: Publicando Acomodação
     And o usuário tenta enviar as informações
     Then o sistema não permite o usuário enviar a publicação
 
+  #new scenario
 
   Scenario: Acomodação não publicada com sucesso devido a campos incompletos
     Given that estou na página "publicar reserva"
