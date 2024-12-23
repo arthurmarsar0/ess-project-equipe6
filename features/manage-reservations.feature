@@ -45,6 +45,15 @@ Feature: Acessar pedidos de reservas de uma localidade
         Then eu vejo um aviso "Esta reserva foi cancelada"
         And eu volto para página "nome da localidade"
 
+    Scenario: Erro ao cancelar uma reserva
+        Given estou na página de detalhamento da reserva "nome do hóspede"
+        And a reserva "nome do hóspede" está confirmada
+        And já se passou a data "inicio da reserva" 
+        When cancelo uma reserva
+        Then uma mensagem de erro "Não foi possivel cancelar esta reserva"
+        And eu volto para página "nome da localidade"
+        And eu vejo que a reserva "nome do hoóspede" ainda consta na listagem
+
 Feature: Acessar as reservas feitas pela minha conta
 	As a  usuário PF do sistema
 	I want to  Ver os pedidos de reservas e as reservas confirmadas da minha conta
