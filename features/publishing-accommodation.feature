@@ -46,4 +46,5 @@ Feature: Publicando Acomodação
     And defino um preço inferior ao preço mínimo permitido pelo sistema
     And envio as informações preenchidas
     Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
-O preço inserido é inferior ao preço mínimo permitido pelo sistema."
+    O preço inserido é inferior ao preço mínimo permitido pelo sistema."
+    And a tela continua na página "Publicacao de Acomodacao"
