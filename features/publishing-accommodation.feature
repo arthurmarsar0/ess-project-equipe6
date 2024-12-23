@@ -65,4 +65,4 @@ Feature: Publicando Acomodação
     And envio as fotos "foto1.png" e "photo2.png"
     And envio as informações preenchidas
     Then um alerta aparece com a mensagem: "Acomodação não foi publicada com sucesso.
-Por favor, preencha todos os campos antes de publica-la."
+Por favor, lembre-se de preencher todos os campos antes de publica-la."
