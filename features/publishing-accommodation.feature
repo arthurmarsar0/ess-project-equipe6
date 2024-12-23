@@ -3,6 +3,8 @@ Feature: Publicando Acomodação
   I want to publicar minha acomodação
   So that eu posso receber reservas para a minha acomodação
 
+  #scenarios GUI
+
   Scenario: Acomodação Publicada com sucesso
     Given that estou na página "publicar reserva"
     When preencho os detalhes da propriedade com a opção "wifi" e "tv"
