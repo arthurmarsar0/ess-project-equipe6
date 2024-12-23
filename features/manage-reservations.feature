@@ -95,4 +95,5 @@ Feature: Acessar as reservas feitas pela minha conta
     Scenario: Abir página de gerenciar suas reservas
         Given estou na página "Main menu"
         When selecio "Gerenciar minhas reservas"
-        Then sou redirecionado à página "Gerenciar minhas reservas"
+        Then sou redirecionado para a página "Gerenciar minhas reservas"
+
