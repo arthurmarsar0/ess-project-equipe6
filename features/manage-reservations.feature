@@ -51,7 +51,7 @@ Feature: Acessar as reservas feitas pela minha conta
 	So that  Eu posso gerenciar as reservas em aberto e confirmadas 
 
     #Scenario GUI
-    
+
     Scenario: Abrir detalhamento de um pedido de reserva
         Given eu estou na página "Gerenciar reservas"
         And há pedidos de reservas em "à confirmar" 
@@ -63,6 +63,15 @@ Feature: Acessar as reservas feitas pela minha conta
         When cancelo uma reserva
         Then eu vejo um aviso "Esta reserva foi cancelada"
         And eu volto para página "Gerenciar reservas"
+
+    Scenario: Erro ao cancelar uma reserva
+        Given estou na página de detalhamento da reserva "nome da localidade"
+        And a reserva "nome da localidade" já está confirmada
+        And já se passou a data de "inicio de reserva"
+        When cancelo uma reserva
+        Then uma mensagem de erro é exibida "Não foi possivel cancelar uma reserva após o inicio dela"
+        And eu volto para a página "Gerenciar reservas"
+        And a reserva "nome da localidade" continua na listagem de reserva "confirmadas"
 
     Scenario: Editar uma reserva 
         Given estou na página de detalhamento da reserva "nome da localidade"
