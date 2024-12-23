@@ -1,3 +1,5 @@
+#feature
+
 Feature: Publicando Acomodação
   As a Pessoa Jurídica
   I want to publicar minha acomodação
