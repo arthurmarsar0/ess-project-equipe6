@@ -2,17 +2,17 @@ import BaseEntity from './base.entity';
 
 export default class PJEntity extends BaseEntity {
   name: string;
-  stars: number; // Para "Estrelas"
+  stars: number;
   cnpj: string;
   phone: string;
   cep: string;
-  street: string; // Logradouro
+  street: string;
   number: string;
-  state: string; // UF
+  state: string;
   city: string;
-  neighborhood: string; // Bairro
-  complement: string; // Complemento
-  profile_picture: string; // Caminho ou URL da foto de perfil
+  neighborhood: string;
+  complement: string;
+  profile_picture: string;
   user_id: string;
 
   constructor(data: PJEntity) {
